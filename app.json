@@ -1,7 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/index-detail/index-detail",
+    "pages/index-detail-buy/index-detail-buy",
+    "pages/sell/sell",
+    "pages/sell-rule/sell-rule",
+    "pages/book-list/book-list",
+    "pages/cart/cart",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,6 +15,70 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#1e1e1e",
+    "selectedColor": "#fe3a2f",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab_icon/index1.png",
+        "selectedIconPath": "images/tab_icon/index.png"
+      },
+      {
+        "pagePath": "pages/sell/sell",
+        "text": "卖书",
+        "iconPath": "images/tab_icon/sell1.png",
+        "selectedIconPath": "images/tab_icon/sell.png"
+      },
+      {
+        "pagePath": "pages/book-list/book-list",
+        "text": "书单",
+        "iconPath": "images/tab_icon/book1.png",
+        "selectedIconPath": "images/tab_icon/book.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/tab_icon/car1.png",
+        "selectedIconPath": "images/tab_icon/car.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tab_icon/mine1.png",
+        "selectedIconPath": "images/tab_icon/mine.png"
+      }
+    ]
+  },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-grid": "components/vant-weapp/grid/index",
+    "van-grid-item": "components/vant-weapp/grid-item/index",
+    "van-icon": "components/vant-weapp/icon/index",
+    "van-tag": "components/vant-weapp/tag/index",
+    "van-cell": "components/vant-weapp/cell/index",
+    "van-cell-group": "components/vant-weapp/cell-group/index",
+    "van-collapse": "components/vant-weapp/collapse/index",
+    "van-collapse-item": "components/vant-weapp/collapse-item/index",
+    "van-popup": "components/vant-weapp/popup/index",
+    "van-button": "components/vant-weapp/button/index",
+    "van-index-bar": "components/vant-weapp/index-bar/index",
+    "van-index-anchor": "components/vant-weapp/index-anchor/index",
+    "van-goods-action": "components/vant-weapp/goods-action/index",
+    "van-goods-action-icon": "components/vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "components/vant-weapp/goods-action-button/index",
+    "van-stepper": "components/vant-weapp/stepper/index",
+    "van-checkbox": "components/vant-weapp/checkbox/index",
+    "van-checkbox-group": "components/vant-weapp/checkbox-group/index",
+    "van-switch": "components/vant-weapp/switch/index",
+    "van-tab": "components/vant-weapp/tab/index",
+    "van-tabs": "components/vant-weapp/tabs/index",
+    "van-notice-bar": "components/vant-weapp/notice-bar/index",
+    "van-divider": "components/vant-weapp/divider/index",
+    "van-card": "components/vant-weapp/card/index"
+  }
 }

@@ -1,0 +1,26 @@
+<view id="container">
+  <view id="userImg">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="user">
+        <view class="userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view id="header">
+    <van-cell title="我的订单" icon="/images/complete.png" is-link/>
+    <van-cell title="我的钱包" icon="/images/qian.png" is-link/>
+  </view>
+  <view id="body">
+    <van-cell title="地址管理" icon="/images/address.png" is-link/>
+    <van-cell title="消息通知" icon="/images/notice.png" is-link/>
+    <van-cell title="客服反馈" icon="/images/kefu.png" is-link/>
+  </view>
+
+  <view id="bottom">
+    <van-cell title="设置" icon="/images/settin.png" is-link/>
+  </view>
+</view>

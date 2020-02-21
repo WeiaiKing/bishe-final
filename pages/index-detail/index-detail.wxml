@@ -1,0 +1,118 @@
+<view id="index-detail">
+  <view id="header">
+    <image src="https://picsum.photos/300" class="header_img"></image>
+    <image src="https://picsum.photos/300" class="header_background_img"></image>
+  </view>
+
+  <view id="de_body">
+    <text style="font-weight:700;">认识经济</text>
+    <view class="de_body_price">
+      <text style="color:#eb4d3d">￥23.50</text>
+      <text class="discount">3折</text>
+    </view>
+    <view>
+      <text style="color:#969696;" decode="{{true}}">原&emsp;价:</text>
+      <text>￥46.00</text>
+    </view>
+    <view style="margin:15rpx 0;">
+      <text style="color:#969696" decode="{{true}}">作&emsp;者:</text>
+      <text>王道论坛</text>
+    </view>
+    <view>
+      <text style="color:#969696">出版社:</text>
+      <text>电子工业出版社</text>
+    </view>
+    <view style="margin-top:15rpx;">
+      <text style="color:#969696">出版年:</text>
+      <text>2018.04</text>
+    </view>
+  </view>
+
+  <view id="introduction">
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="简介和目录" name="1">
+        提供多样店铺模板，快速搭建网上商城
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+
+  <view id="content-bottom">
+    <view class="define_cell" style="margin-bottom:0;">
+      <view style="display:flex;align-items:center">
+        <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+        <span style="font-weight:700">相关书籍</span>
+      </view>
+    </view>
+    <view class="content-bottom">
+      <van-grid column-num="3" border="{{ false }}">
+        <van-grid-item use-slot wx:for="{{ 3 }}" wx:key="index" url="/pages/commodity-detail/commodity-detail">
+          <view>
+            <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+            <view>认识经济</view>
+            <view class="content_bottom">
+              <view>
+                <view style="color:#ff4d94;">￥158</view>
+              </view>
+            </view>
+          </view>
+        </van-grid-item>
+      </van-grid>
+    </view>
+    <view style="height:200rpx;"></view>
+  </view>
+
+  <view id="goods-bottom">
+    <van-goods-action>
+      <van-goods-action-icon icon="like-o" text="收藏" />
+      <van-goods-action-icon icon="cart-o" text="购物车" info="5" style="margin-left:-16rpx;" link-type="switchTab" url="/pages/cart/cart" />
+      <van-goods-action-button text="加入购物车" type="warning" bindtap="add_cart" />
+      <van-goods-action-button text="立即购买" bindtap="add_buy" />
+    </van-goods-action>
+  </view>
+
+  <view id="popup">
+    <view class="popup_cart">
+      <van-popup show="{{ add_cart }}" closeable close-icon="close" position="bottom" custom-style="height: 40%;" bind:close="add_cart_cloce">
+        <view class="dialog_cart">
+          <view>书名</view>
+          <view>付款方式</view>
+          <view>
+            <text>￥10.3</text>
+            <text>轻度污渍</text>
+          </view>
+          <view>
+            <text>￥9.00</text>
+            <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+          </view>
+          <view>
+            <text>￥9.00</text>
+            <text>泛黄或褪色，附着胶带或标签</text>
+          </view>
+          <van-button type="warning" round bindtap="cart_confirm">确定</van-button>
+        </view>
+      </van-popup>
+    </view>
+    <view class=" popup_buy ">
+      <van-popup show="{{ add_buy }}" closeable close-icon="close" position="bottom" custom-style="height: 40%;" bind:close="add_buy_cloce">
+        <view class="dialog_cart">
+          <view>书名</view>
+          <view>付款方式</view>
+          <view>
+            <text>￥10.3</text>
+            <text>轻度污渍</text>
+          </view>
+          <view>
+            <text>￥9.00</text>
+            <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+          </view>
+          <view>
+            <text>￥9.00</text>
+            <text>泛黄或褪色，附着胶带或标签</text>
+          </view>
+          <van-button type="warning" round bindtap="buy_confirm">确定</van-button>
+        </view>
+      </van-popup>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<view class="session">
+    <view>
+        <view class="step">
+            <image src="/images/scan.png" style="width:200rpx;height:200rpx;"></image>
+            <view>
+                <view>手机扫码</view>
+                <view>看收购价</view>
+                <view>
+                    <view bindtap="open" class="open" data-id="{{open}}">什么书不收</view>
+                    <van-icon name="arrow-down" color="#ffd6d2" size="26rpx" wx:if="{{open==1}}" />
+                    <van-icon name="arrow-up" color="#ffd6d2" size="26rpx" wx:else/>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{open==0}}">
+            <view style="padding:30rpx 30rpx 0 30rpx">
+                <view>扫码提示不收或在安排快递前线上审核显示拒绝的就是暂时不收的。</view>
+                <view>不收有影响阅读的破损、污渍、老化、异味的书。</view>
+                <view>不收盗版、非卖品、非法出版物</view>
+            </view>
+        </block>
+        <view class="line"></view>
+        <view class="step">
+            <image src="/images/express.png" style="width:200rpx;height:200rpx;"></image>
+            <view>
+                <view>快递免费</view>
+                <view>上门取书</view>
+            </view>
+        </view>
+        <view class="line"></view>
+        <view class="step">
+            <image src="/images/money.png" style="width:200rpx;height:200rpx;"></image>
+            <view>
+                <view>审核通过</view>
+                <view>书款到账</view>
+                <view>
+                    <view bindtap="open_icon" class="open" data-id="{{open_icon}}">什么是审核</view>
+                    <!-- <text bindtap="open" class="open" data-index="1">什么是审核</text> -->
+                    <van-icon name="arrow-down" color="	#ff8780" size="26rpx" wx:if="{{open_icon==1}}" />
+                    <van-icon name="arrow-up" color="	#ff8780" size="26rpx" wx:else/>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{open_icon==0}}">
+            <view style="padding:30rpx 30rpx 0 30rpx;">
+                <view>多抓鱼在收到书时会进行品相审核，这一步会把书籍的品相分为全新、品相良好、品相中等、品相不合格，其中品相中等的收购价比全新和品相良好的要低 20%，品相不合格的书会被拒收。</view>
+                <view>卖家可以自付运费取回被拒的书（首次取回免费）。</view>
+            </view>
+        </block>
+        <view class="line"></view>
+    </view>
+    <van-cell is-link title="了解更多买书规则" link-type="navigateTo" url="../sell-rule/sell-rule" size="large" />
+    <view bindtap='getScancode' class="scan">
+        <image src="/images/scan.png" style="width:60rpx;height:60rpx"></image>
+        <view>扫码卖书</view>
+    </view>
+    <!-- <button bindtap='getScancode'>扫码卖书</button> -->
+    <view wx:if="{{result !=''}}">
+        <view>扫码的内容:{{result}}</view>
+        <view class="book_list">
+            <image src="{{img}}"></image>
+            <view class="book_list_item">
+                <view>
+                    <view>{{title}}{{subtitle}}</view>
+                    <view>{{author}}</view>
+                    <view>豆瓣评分{{rating}}</view>
+                </view>
+                <view>￥{{price}}</view>
+            </view>
+        </view>
+    </view>
+</view>

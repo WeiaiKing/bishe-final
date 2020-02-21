@@ -1,0 +1,29 @@
+page{
+ background: #f8f8f8;
+}
+
+.user {
+  background:#fadfe3;
+  color: #777;
+}
+
+.userinfo {
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+#body{
+  margin: 30rpx 0;
+}
+

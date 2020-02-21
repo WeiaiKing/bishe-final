@@ -1,21 +1,121 @@
-/**index.wxss**/
-.userinfo {
+page {
+  font-size: 28rpx;
+}
+
+#search {
+  margin: 15rpx 30rpx;
+  box-sizing: border-box;
+  padding: 15rpx;
   display: flex;
-  flex-direction: column;
+  height: 60rpx;
+  border-radius: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+}
+
+.search_header {
+  display: flex;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.search_p {
+  width: 500rpx;
+  padding-left: 15rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+/* 轮播图 */
+
+.page-body {
+  margin: 24rpx 30rpx 0rpx 30rpx;
+  width: 690rpx;
+  height: 220rpx;
+  background: #fff;
 }
 
-.usermotto {
-  margin-top: 200px;
+.page-body image {
+  width: 690rpx;
+  height: 220rpx;
+}
+
+swiper {
+  display: block;
+  height: 220rpx;
+}
+
+.swiper-item {
+  background-color: grey;
+}
+
+/* grid image size */
+
+.van-grid-item__icon {
+  font-size: var(--grid-item-icon-size, 50px) !important;
+}
+
+.van-grid-item__text {
+  margin-top: -20rpx !important;
+}
+
+/* content-header */
+
+#content-header {
+  background: #eff0f1;
+
+  padding: 30rpx;
+  margin-top: 15rpx;
+}
+
+.define_cell {
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-header {
+  display: flex;
+}
+
+.content-header-left {
+  width: 240rpx;
+  height: 360rpx;
+  padding: 15rpx;
+  background: #dde0e5;
+  margin-right: 20rpx;
+}
+
+.content-header-right {
+  width: 400rpx;
+}
+
+.content-header-right .up {
+  background: #e6e7e8;
+  height: 185rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.content-header-right .down {
+  background: #eae9e8;
+  height: 185rpx;
+  display: flex;
+}
+
+#content-bottom {
+  padding: 30rpx 20rpx;
+}
+
+/* 格子 */
+
+.van-grid-item__content {
+  padding: var(--grid-item-content-padding, 14px 8px 0 8px) !important;
+}
+
+#header{
+  padding: 30rpx;
+  height: 250rpx;
+}
+#body{
+  padding: 30rpx;
 }
