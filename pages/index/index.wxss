@@ -90,16 +90,22 @@ swiper {
 }
 
 .content-header-right .up {
+  padding: 15rpx;
   background: #e6e7e8;
   height: 185rpx;
   margin-bottom: 20rpx;
   display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .content-header-right .down {
+  padding: 15rpx;
   background: #eae9e8;
   height: 185rpx;
   display: flex;
+  box-sizing: border-box;
+  justify-content: space-between
 }
 
 #content-bottom {
@@ -119,3 +125,4 @@ swiper {
 #body{
   padding: 30rpx;
 }
+

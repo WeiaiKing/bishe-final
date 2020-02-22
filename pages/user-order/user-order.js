@@ -1,12 +1,11 @@
-// pages/index/index.js
+// pages/user-order/user-order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    kkk:true,
-    background: ['https://picsum.photos/700', 'https://picsum.photos/400', 'https://picsum.photos/800'],
+    active: 0
   },
 
   /**
@@ -15,16 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  kkk(){
-    this.setData({
-      kkk: false
-    })
-  },
-  go_book_list_detail(){
-    wx.navigateTo({
-      url: '../book-list-detail/book-list-detail',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

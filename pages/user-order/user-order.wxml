@@ -1,0 +1,82 @@
+<view id="container">
+  <van-tabs active="{{ active }}" color="#ff4d94" sticky animated swipeable>
+    <van-tab title="买过的书">
+      <view class="sell">
+        <view class="sell_header">
+          <view>
+            <text >订单编号：</text>
+            <text>2764977274972937d7</text>
+          </view>
+          <text style="color:#ff4d94">进行中</text>
+        </view>
+        <text style="color:#9c9c9c;font-size:28rpx;">2019-06-24 16:04:27</text>
+
+        <van-divider />
+        <view>
+          <scroll-view scroll-x class="nav_txt" bindtap="nav_txt">
+            <view class="nav_txt_item" data-index="1">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==2?'active':''}}" data-index="2">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==3?'active':''}}" data-index="3">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==4?'active':''}}" data-index="4">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+          </scroll-view>
+          <view style="text-align:right;margin-top:20rpx;">实付 ￥168.4</view>
+        </view>
+        <van-divider />
+        <view class="sell_bottom">
+          <view style="border:4rpx solid #ff4d94;color:#ff4d94;padding:0 8rpx;">取消订单</view>
+          <!-- <van-button plain type="primary" color="#ff4d94" size="small">取消订单</van-button> -->
+        </view>
+      </view>
+      <view class="sell">
+        <view class="sell_header">
+          <view>
+            <text >订单编号：</text>
+            <text>276497727497297d7</text>
+          </view>
+          <text style="color:#ff4d94">已完成</text>
+        </view>
+        <text style="color:#9c9c9c;font-size:28rpx;">2019-06-24 16:04:27</text>
+
+        <van-divider />
+        <view>
+          <scroll-view scroll-x class="nav_txt" bindtap="nav_txt">
+            <view class="nav_txt_item" data-index="1">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==2?'active':''}}" data-index="2">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==3?'active':''}}" data-index="3">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+            <view class="nav_txt_item {{nav_index==4?'active':''}}" data-index="4">
+              <image src="https://picsum.photos/200" style="width:110rpx;height:110rpx;margin-top:10rpx"></image>
+            </view>
+          </scroll-view>
+          <view style="text-align:right;margin-top:20rpx;">实付 ￥168.4</view>
+        </view>
+        <van-divider />
+        <view class="sell_bottom">
+          <view style="border:4rpx solid #ff4d94;color:#ff4d94;padding:0 8rpx;">取消订单</view>
+          <!-- <van-button plain type="primary" color="#ff4d94" size="small">取消订单</van-button> -->
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="卖过的书">
+      <view class="notorder">
+        <image src="/images/notorder.png" style="width:240rpx;height:240rpx;margin-top:350rpx"></image>
+        <view>暂无相关订单</view>
+      </view>
+    </van-tab>
+
+  </van-tabs>
+</view>

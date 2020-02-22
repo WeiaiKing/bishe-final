@@ -6,8 +6,14 @@
     "pages/sell/sell",
     "pages/sell-rule/sell-rule",
     "pages/book-list/book-list",
+    "pages/book-list-detail/book-list-detail",
     "pages/cart/cart",
-    "pages/user/user"
+    "pages/user-address/user-address",
+    "pages/user/user",
+    "pages/user-address-create/user-address-create",
+    "pages/user-address-editor/user-address-editor",
+    "pages/user-order/user-order",
+    "pages/user-order-detail/user-order-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -79,6 +85,7 @@
     "van-tabs": "components/vant-weapp/tabs/index",
     "van-notice-bar": "components/vant-weapp/notice-bar/index",
     "van-divider": "components/vant-weapp/divider/index",
-    "van-card": "components/vant-weapp/card/index"
+    "van-card": "components/vant-weapp/card/index",
+    "van-steps": "components/vant-weapp/steps/index"
   }
 }

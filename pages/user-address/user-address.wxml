@@ -1,0 +1,68 @@
+<view id="container">
+  <view style="">
+    <van-cell-group>
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="300px;" label="姓名 111111" border="{{ false }}" icon="location-o" is-link url="/pages/user-address-editor/user-address-editor"/>
+    </van-cell-group>
+  </view>
+  <view style="">
+    <van-cell-group>
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="300px;" label="姓名 111111" border="{{ false }}" icon="location-o" is-link url="/pages/user-address-editor/user-address-editor"/>
+    </van-cell-group>
+  </view>
+  <view style="">
+    <van-cell-group>
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="300px;" label="姓名 111111" border="{{ false }}" icon="location-o" is-link url="/pages/user-address-editor/user-address-editor"/>
+    </van-cell-group>
+  </view>
+  <navigator url="/pages/user-address-create/user-address-create">
+    <view class="bottom_address">
+      <van-button type="primary" color="#ff4d94" round block>添加地址</van-button>
+    </view>
+  </navigator>
+</view>
+<!-- <view wx:if="{{isconfirm_build}}">
+  <view class="boby">
+    <view class="body_flex">
+      <view>收货人</view>
+      <input placeholder="请填写收货地址姓名" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.title}}" bindblur="get_title"></input>
+    </view>
+    <view class="body_flex">
+      <view>手机号</view>
+      <input placeholder="请填写收货人手机号" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.company}}" bindblur="get_company"></input>
+    </view>
+    <view class="section">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="body_flex">
+          <view>收货地址</view>
+          <input value="{{region[0]}}{{region[1]}}{{region[2]}}" placeholder="请输入职位名称" placeholder-style="color:#ff4d94;font-size:32rpx;" disabled style="width:450rpx;"></input>
+        </view>
+      </picker>
+    </view>
+    <view class="body_flex">
+      <view>门牌号</view>
+      <input placeholder="详细地址.咧如:1号楼302" placeholder-style="color:#999999;font-size:32rpx;" value="{{modify.work_address}}" bindblur="get_work_address" style="width:450rpx;"></input>
+    </view>
+
+    <view class="body_flex">
+      <view>设为默认值</view>
+
+      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#ff4d94" />
+
+    </view>
+
+
+  </view>
+
+  <van-button type="info" round color="#ff4d94" bindtap="confirm_build" custom-style="margin:40rpx;">立即发布</van-button>
+</view> -->
+<!-- <view class="sign_up" wx:else>
+  <image src="../../../assets/recruit/pic_succeed@3x.png" class="sign_up_img"></image>
+  <view>提交成功</view>
+  <view style="margin:26rpx 0 40rpx 0;">管理员审核通过后将在平台展示</view>
+  <van-button round type="info" bindtap="return_index" color="#ff4d94" custom-style="color:#4c5bff;">返回首页</van-button>
+</view> -->
+<!-- 
+<view class="notaddress">
+  <image src="/images/notaddress.png" style="width:240rpx;height:240rpx;margin-top:350rpx"></image>
+  <view>暂无相关订单</view>
+</view> -->

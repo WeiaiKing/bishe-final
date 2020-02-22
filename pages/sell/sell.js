@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+let scan_list =[]
 Page({
   data: {
     result: '',
@@ -52,8 +52,6 @@ Page({
   },
 
   getScancode: function () {
-    // var _this = this;
-    // 允许从相机和相册扫码
     wx.scanCode({
       success: (res) => {
         console.log(res);
@@ -68,15 +66,16 @@ Page({
             "content-type": "application/x-www-form-urlencoded"
           },
           success: (res) => {
+            this.scan_list.push(res.data)
             this.setData({
               img: res.data.images.small,
               author: res.data.author,
-              rating: res.data.rating.average,
               price: res.data.price,
               title: res.data.title,
               subtitle: res.data.subtitle
             })
             console.log(res)
+            console.log(this.scan_list)
             console.log(res.data.subtitle)
           }
         })

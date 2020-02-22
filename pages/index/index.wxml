@@ -23,7 +23,7 @@
     </view>
     <view id="grid">
       <van-grid column-num="5" border="{{ false }}">
-        <van-grid-item icon="/images/1.png" text="教材辅导" url="/pages/user-address/user-address" />
+        <van-grid-item icon="/images/1.png" text="教材辅导" url="/pages/book-list-detail/book-list-detail" />
         <van-grid-item icon="/images/2.png" text="经管励志" />
         <van-grid-item icon="/images/3.png" text="人文社科" />
         <van-grid-item icon="/images/4.png" text="科技科普" />
@@ -41,28 +41,31 @@
         <image src="/images/row.png" style="width:48rpx;height:48rpx;"></image>
       </view>
       <view class="content-header">
-        <view class="content-header-left">
+        <view class="content-header-left" bindtap="go_book_list_detail">
           <view>
             <view>限时抢购</view>
-            <view style="margin:15rpx 0 60rpx 0;">限时限量抢购</view>
+            <view style="color:#969696;font-size:24rpx;margin:15rpx 0 50rpx 0;">限时限量抢购</view>
           </view>
-          <image src="https://picsum.photos/300" style="width:160rpx;height:200rpx;" mode="aspectFill"></image>
+
+          <image src="https://picsum.photos/300" style="width:160rpx;height:200rpx;margin:0 0 30rpx 40rpx;" mode="aspectFill"></image>
+
+
         </view>
         <view class="content-header-right">
           <view class="up">
             <view>
               <view>优惠套装</view>
-              <view style="color:#969696;font-size:24rpx;">大家都在买</view>
+              <view style="color:#969696;font-size:24rpx;margin:10rpx 0;">大家都在买</view>
             </view>
-            <image src="https://picsum.photos/300" style="width:160rpx;height:150rpx;" mode="aspectFill"></image>
+            <image src="https://picsum.photos/300" style="width:160rpx;height:150rpx;margin-right:20rpx;" mode="aspectFill"></image>
           </view>
           <view class="down">
             <view>
               <view>天天特价</view>
-              <view style="color:#969696;font-size:24rpx;">每日低价好书等你来</view>
-              <view style="background:#cc6d9a">1折起</view>
+              <view style="color:#969696;font-size:24rpx;margin:10rpx 0;">每日低价好书等你来</view>
+              <view style="background:#cc6d9a;width:80rpx;">1折起</view>
             </view>
-            <image src="https://picsum.photos/300" style="width:100rpx;height:120rpx;" mode="aspectFill"></image>
+            <image src="https://picsum.photos/300" style="width:100rpx;height:120rpx;margin:20rpx;" mode="aspectFill"></image>
           </view>
         </view>
       </view>
@@ -76,7 +79,7 @@
       </view>
       <view class="content-bottom">
         <van-grid column-num="3" border="{{ false }}">
-          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/commodity-detail/commodity-detail">
+          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/index-detail/index-detail">
             <view>
               <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
               <view>认识经济</view>

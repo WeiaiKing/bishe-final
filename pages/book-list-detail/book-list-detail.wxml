@@ -1,0 +1,107 @@
+<van-index-bar scroll-top="{{ scrollTop }}">
+  <view>
+    <van-index-anchor index="生物制药"></van-index-anchor>
+    <view id="content-bottom">
+      <view class="define_cell" style="margin-bottom:0;">
+        <view style="display:flex;align-items:center">
+          <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+          <span style="font-weight:700">最新上架</span>
+        </view>
+      </view>
+      <view class="content-bottom">
+        <van-grid column-num="3" border="{{ false }}">
+          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/index-detail/index-detail">
+            <view>
+              <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+              <view>认识经济</view>
+              <view class="content_bottom">
+                <view>
+                  <view style="color:#ff4d94;">￥158</view>
+                </view>
+              </view>
+            </view>
+          </van-grid-item>
+        </van-grid>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <van-index-anchor index="海航技术"></van-index-anchor>
+    <view id="content-bottom">
+      <view class="define_cell" style="margin-bottom:0;">
+        <view style="display:flex;align-items:center">
+          <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+          <span style="font-weight:700">最新上架</span>
+        </view>
+      </view>
+      <view class="content-bottom">
+        <van-grid column-num="3" border="{{ false }}">
+          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/index-detail/index-detail">
+            <view>
+              <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+              <view>认识经济</view>
+              <view class="content_bottom">
+                <view>
+                  <view style="color:#ff4d94;">￥158</view>
+                </view>
+              </view>
+            </view>
+          </van-grid-item>
+        </van-grid>
+      </view>
+    </view>
+  </view>
+   <view>
+    <van-index-anchor index="水产养殖学"></van-index-anchor>
+    <view id="content-bottom">
+      <view class="define_cell" style="margin-bottom:0;">
+        <view style="display:flex;align-items:center">
+          <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+          <span style="font-weight:700">最新上架</span>
+        </view>
+      </view>
+      <view class="content-bottom">
+        <van-grid column-num="3" border="{{ false }}">
+          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/index-detail/index-detail">
+            <view>
+              <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+              <view>认识经济</view>
+              <view class="content_bottom">
+                <view>
+                  <view style="color:#ff4d94;">￥158</view>
+                </view>
+              </view>
+            </view>
+          </van-grid-item>
+        </van-grid>
+      </view>
+    </view>
+  </view>
+   <view>
+    <van-index-anchor index="海洋科学"></van-index-anchor>
+    <view id="content-bottom">
+      <view class="define_cell" style="margin-bottom:0;">
+        <view style="display:flex;align-items:center">
+          <view style="background:#eb4d3d;color:#fff;margin:0 10rpx;height:30rpx;width:5rpx;"></view>
+          <span style="font-weight:700">最新上架</span>
+        </view>
+      </view>
+      <view class="content-bottom">
+        <van-grid column-num="3" border="{{ false }}">
+          <van-grid-item use-slot wx:for="{{ 6 }}" wx:for-item="index" url="/pages/index-detail/index-detail">
+            <view>
+              <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+              <view>认识经济</view>
+              <view class="content_bottom">
+                <view>
+                  <view style="color:#ff4d94;">￥158</view>
+                </view>
+              </view>
+            </view>
+          </van-grid-item>
+        </van-grid>
+      </view>
+    </view>
+  </view>
+</van-index-bar>

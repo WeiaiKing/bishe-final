@@ -1,2 +1,9 @@
-<!--pages/book-list/book-list.wxml-->
-<text>pages/book-list/book-list.wxml</text>
+<view id="book-list">
+  <block wx:for="{{book_list}}" wx:key="index" >
+    <view class="economics" bindtap="go_book_detail">
+      <view class="mask" ></view>
+      <view class="text">{{item.name}}</view>
+      <image src="https://picsum.photos/300" style="width:338rpx;height:300rpx;"></image>
+    </view>
+  </block>
+</view>
