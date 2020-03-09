@@ -1,55 +1,40 @@
-//index.js
+const $api = require("../../utils/api.js")
+const $wx = require('../../utils/wx.js')
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    target_action: 1,
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    show: false, //是否弹框（授权）
   },
-  action: function (e) {
-    console.log(e.target.dataset.index)
-    this.setData({
-      target_action: e.target.dataset.index
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
+  onAuth2: function (e) {
+    if (e.detail.userInfo) {
+      this.onClose()
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
+        userInfo: e.detail.userInfo
       })
     }
+    $wx.auth2(e)
+
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  onClose() {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+      show: false
+    });
+  },
+  onLoad: function() {
+    
+  },
+  onShow(){
+    if (wx.getStorageSync('userInfo')) {
+      this.setData({
+        userInfo: wx.getStorageSync('userInfo'),
+        show: false,
+      })
+    } else {
+      this.setData({
+        show: true,
+      })
+    }
   }
 })

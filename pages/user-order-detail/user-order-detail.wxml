@@ -24,7 +24,7 @@
     <van-divider/>
     <view style="text-align:right;height:60rpx;margin-top:30rpx;">
       <text>已支付</text>
-      <text style="color:#ff4d94">￥230.4</text>
+      <text style="color:#ff8780">￥230.4</text>
     </view>
   </view>
   <view id="order-detail">
@@ -46,8 +46,8 @@
   <view id="bottom-but">
     <!-- 底部部分 -->
     <view>
-      <van-button type="default"  plain round style="margin-right:15rpx;">联系客服</van-button>
-      <van-button type="default" color="#ff8780"  plain round>确认收货</van-button>
+      <van-button type="default"  plain round style="margin-right:15rpx;"bindtap="goUserService">联系客服</van-button>
+      <van-button type="default" color="#ff8780"  plain round >确认收货</van-button>
     </view>
   </view>
 </view>

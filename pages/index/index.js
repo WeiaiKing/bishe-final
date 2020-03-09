@@ -1,26 +1,38 @@
-// pages/index/index.js
+const $api = require("../../utils/api.js")
+const $wx = require('../../utils/wx.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    kkk:true,
+    
     background: ['https://picsum.photos/700', 'https://picsum.photos/400', 'https://picsum.photos/800'],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onAuth2: function(e) {
+    console.log(e)
+    wx.setStorage({
+      key: 'userInfo',
+      data: e.detail.userInfo,
+    })
+    $wx.auth2(e)
   },
-  kkk(){
-    this.setData({
-      kkk: false
+  input() {
+    wx.navigateTo({
+      url: '../index-search/index-search',
+      success: function(res) {},
     })
   },
-  go_book_list_detail(){
+  onLoad: function(options) {
+  },
+  go_book_list() {
+    wx.navigateTo({
+      url: '../book-list/book-list',
+      success: function(res) {},
+    })
+  },
+  go_book_list_detail() {
     wx.navigateTo({
       url: '../book-list-detail/book-list-detail',
     })
@@ -28,49 +40,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

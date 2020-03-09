@@ -5,62 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    popup:false
+    week: '周一(4月1日)',
+    time: '10:00-11:00',
   },
-
+  selctWeek(e) {
+    this.setData({
+      week: e.currentTarget.dataset.week
+    })
+  },
+  selectTime(e) {
+    console.log(e)
+    this.setData({
+      time: e.currentTarget.dataset.time
+    })
+  },
+  time_confirm() {
+    this.setData({
+      popup: false
+    });
+  },
   onClose() {
-    this.setData({ popup: false });
+    this.setData({
+      popup: false
+    });
   },
-  onLoad: function (options) {
-
+  // 选择时间
+  popup(){
+    this.setData({
+      popup: true
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  onLoad: function(options) {
 
   },
+  onShow: function() {
+    var pages = getCurrentPages();//获取当前页面js里面的pages里的所有信息。
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    var currPage = pages[pages.length - 1]; //
+//prevPage 是获取上一个页面的js里面的pages的所有信息。-1当前页面 -2 是上一个页面，-3是上上个页面以此类推。
 
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    console.log(currPage)
   }
 })

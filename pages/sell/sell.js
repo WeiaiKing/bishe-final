@@ -1,26 +1,17 @@
 //index.js
 //获取应用实例
 const app = getApp()
-let scan_list =[]
+// 扫码卖书列表
+let scan_list = [];
 Page({
   data: {
+ 
     result: '',
-    img: '',
-    author: '',
-    rating: '',
-    price: '',
-    subtitle: '',
-    title: '',
     open: 1,
     open_icon: 1,
-    activeNames: ''
+
   },
-  onChange(event) {
-    console.log(event.detail)
-    this.setData({
-      activeNames: event.detail
-    });
-  },
+//  打开下拉
   open: function (e) {
     console.log(e.target.dataset.id)
     if (e.target.dataset.id == 1) {
@@ -34,6 +25,7 @@ Page({
     }
     console.log("触发了")
   },
+  // 关闭下拉
   open_icon: function (e) {
     console.log(e.target.dataset.id)
     if (e.target.dataset.id == 1) {
@@ -50,7 +42,7 @@ Page({
   onLoad: function () {
 
   },
-
+// 扫码卖书列表
   getScancode: function () {
     wx.scanCode({
       success: (res) => {
@@ -66,22 +58,27 @@ Page({
             "content-type": "application/x-www-form-urlencoded"
           },
           success: (res) => {
-            this.scan_list.push(res.data)
+            scan_list.push(res.data)
             this.setData({
-              img: res.data.images.small,
-              author: res.data.author,
-              price: res.data.price,
-              title: res.data.title,
-              subtitle: res.data.subtitle
+              scan_list
             })
-            console.log(res)
-            console.log(this.scan_list)
-            console.log(res.data.subtitle)
           }
         })
       }
     })
 
+  },
+  goPublic(){
+    wx.navigateTo({
+      url: '../sell-public/sell-public',
+      success: function (res) { },
+    })
+  },
+  goPhace(){
+    wx.navigateTo({
+      url: '../sell-phace/sell-phace',
+      success: function(res) {},
+    })
   }
 
 })

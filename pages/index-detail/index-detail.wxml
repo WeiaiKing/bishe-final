@@ -1,29 +1,29 @@
 <view id="index-detail">
   <view id="header">
-    <image src="https://picsum.photos/300" class="header_img"></image>
-    <image src="https://picsum.photos/300" class="header_background_img"></image>
+    <image src="https://img9.doubanio.com/view/subject/s/public/s33441355.jpg" class="header_img"></image>
+    <image src="https://img9.doubanio.com/view/subject/s/public/s33441355.jpg" class="header_background_img"></image>
   </view>
 
   <view id="de_body">
-    <text style="font-weight:700;">认识经济</text>
+    <text style="font-weight:700;">书店日记</text>
     <view class="de_body_price">
-      <text style="color:#eb4d3d">￥23.50</text>
-      <text class="discount">3折</text>
+      <text style="color:#eb4d3d;margin:0 15rpx 0 -5rpx;">￥15.80</text>
+      <text class="discount">2折</text>
     </view>
     <view>
-      <text style="color:#969696;" decode="{{true}}">原&emsp;价:</text>
-      <text>￥46.00</text>
+      <text style="color:#969696;" decode="{{true}}">原&emsp;价：</text>
+      <text>￥79.00</text>
     </view>
     <view style="margin:15rpx 0;">
-      <text style="color:#969696" decode="{{true}}">作&emsp;者:</text>
-      <text>王道论坛</text>
+      <text style="color:#969696" decode="{{true}}">作&emsp;者：</text>
+      <text>The Diary of a Bookseller</text>
     </view>
     <view>
-      <text style="color:#969696">出版社:</text>
-      <text>电子工业出版社</text>
+      <text style="color:#969696">出版社：</text>
+      <text>广西师范大学出版社</text>
     </view>
     <view style="margin-top:15rpx;">
-      <text style="color:#969696">出版年:</text>
+      <text style="color:#969696">出版年：</text>
       <text>2018.04</text>
     </view>
   </view>
@@ -31,7 +31,7 @@
   <view id="introduction">
     <van-collapse value="{{ activeNames }}" bind:change="onChange">
       <van-collapse-item title="简介和目录" name="1">
-        提供多样店铺模板，快速搭建网上商城
+        第一章：超神之路
       </van-collapse-item>
     </van-collapse>
   </view>
@@ -45,13 +45,13 @@
     </view>
     <view class="content-bottom">
       <van-grid column-num="3" border="{{ false }}">
-        <van-grid-item use-slot wx:for="{{ 3 }}" wx:key="index" url="/pages/commodity-detail/commodity-detail">
+        <van-grid-item use-slot wx:for="{{ 3 }}" wx:key="index" url="/pages/index-detail/index-detail">
           <view>
-            <image src="https://picsum.photos/400" style="width: 215rpx; height: 230rpx;"></image>
+            <image src="https://img3.doubanio.com/view/subject/s/public/s32332471.jpg" style="width: 180rpx; height: 230rpx;"></image>
             <view>认识经济</view>
             <view class="content_bottom">
               <view>
-                <view style="color:#ff4d94;">￥158</view>
+                <view style="color:#ff8780;">￥158</view>
               </view>
             </view>
           </view>
@@ -64,7 +64,7 @@
   <view id="goods-bottom">
     <van-goods-action>
       <van-goods-action-icon icon="like-o" text="收藏" />
-      <van-goods-action-icon icon="cart-o" text="购物车" info="5" style="margin-left:-16rpx;" link-type="switchTab" url="/pages/cart/cart" />
+      <van-goods-action-icon icon="cart-o" text="购物车" info="{{cartNum}}" style="margin-left:-16rpx;" link-type="switchTab" url="/pages/cart/cart" />
       <van-goods-action-button text="加入购物车" type="warning" bindtap="add_cart" />
       <van-goods-action-button text="立即购买" bindtap="add_buy" />
     </van-goods-action>
@@ -72,42 +72,51 @@
 
   <view id="popup">
     <view class="popup_cart">
-      <van-popup show="{{ add_cart }}" closeable close-icon="close" position="bottom" custom-style="height: 40%;" bind:close="add_cart_cloce">
+      <van-popup show="{{ add_cart }}" closeable close-icon="close" position="bottom" custom-style="height: 55%;" bind:close="add_cart_cloce" round>
         <view class="dialog_cart">
-          <view>书名</view>
-          <view>付款方式</view>
+          <view>认识经济</view>
+          <van-cell title="不同品相有何区别" value="查看" is-link url="../cart-rule/cart-rule" />
           <view>
-            <text>￥10.3</text>
-            <text>轻度污渍</text>
+            <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+              <text>￥10.3</text>
+              <text>轻度污渍</text>
+            </view>
+            <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+            </view>
+            <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，附着胶带或标签</text>
+            </view>
           </view>
-          <view>
-            <text>￥9.00</text>
-            <text>泛黄或褪色，轻度污渍，磨损或破损</text>
-          </view>
-          <view>
-            <text>￥9.00</text>
-            <text>泛黄或褪色，附着胶带或标签</text>
-          </view>
-          <van-button type="warning" round bindtap="cart_confirm">确定</van-button>
+          <van-button type="warning" round bindtap="cart_confirm" class="fix-botttom">确定</van-button>
         </view>
       </van-popup>
     </view>
     <view class=" popup_buy ">
-      <van-popup show="{{ add_buy }}" closeable close-icon="close" position="bottom" custom-style="height: 40%;" bind:close="add_buy_cloce">
+      <van-popup show="{{ add_buy }}" closeable close-icon="close" position="bottom" custom-style="height: 55%;" bind:close="add_buy_cloce" round>
         <view class="dialog_cart">
-          <view>书名</view>
-          <view>付款方式</view>
+          <view>认识经济</view>
           <view>
-            <text>￥10.3</text>
-            <text>轻度污渍</text>
+            <view class="{{select==1?'border-active':'border'}}" bindtap="select" data-id="1">
+              <text>￥10.3</text>
+              <text>轻度污渍</text>
+            </view>
+            <view class="{{select==2?'border-active':'border'}}" bindtap="select" data-id="2">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，轻度污渍，磨损或破损</text>
+            </view>
+            <view class="{{select==3?'border-active':'border'}}" bindtap="select" data-id="3">
+              <text>￥9.00</text>
+              <text>泛黄或褪色，附着胶带或标签</text>
+            </view>
           </view>
-          <view>
-            <text>￥9.00</text>
-            <text>泛黄或褪色，轻度污渍，磨损或破损</text>
-          </view>
-          <view>
-            <text>￥9.00</text>
-            <text>泛黄或褪色，附着胶带或标签</text>
+          <view class="buy_num">
+            <view>购买数量</view>
+            <view>
+              <van-stepper value="{{ 1 }}" input-width="60rpx" button-size="50rpx" />
+            </view>
           </view>
           <van-button type="warning" round bindtap="buy_confirm">确定</van-button>
         </view>

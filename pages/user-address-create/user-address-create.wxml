@@ -12,7 +12,7 @@
       <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
         <view class="body_flex">
           <view>收货地址</view>
-          <input value="{{region[0]}}{{region[1]}}{{region[2]}}" placeholder="请输入职位名称" placeholder-style="color:#ff4d94;font-size:32rpx;" disabled style="width:450rpx;"></input>
+          <input value="{{region[0]}}{{region[1]}}{{region[2]}}" placeholder="请输入职位名称" placeholder-style="color:#ff8780;font-size:32rpx;" disabled style="width:450rpx;"></input>
         </view>
       </picker>
     </view>
@@ -22,8 +22,8 @@
     </view>
     <view class="body_flex">
       <view>设为默认值</view>
-      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#ff4d94" />
+      <van-switch checked="{{ checked }}" bind:change="onChange" active-color="#ff8780" />
     </view>
   </view>
-  <van-button type="info" round color="#ff4d94" bindtap="confirm_build" custom-style="margin:40rpx;">保存</van-button>
+  <van-button type="info" round color="#ff8780" bindtap="confirm_build" custom-style="margin:40rpx;">保存</van-button>
 </view>

@@ -1,15 +1,24 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index-search/index-search",
     "pages/index-detail/index-detail",
     "pages/index-detail-buy/index-detail-buy",
     "pages/sell/sell",
+    "pages/sell-public/sell-public",
     "pages/sell-rule/sell-rule",
+    "pages/sell-phace/sell-phace",
     "pages/book-list/book-list",
     "pages/book-list-detail/book-list-detail",
     "pages/cart/cart",
+    "pages/cart-rule/cart-rule",
     "pages/user-address/user-address",
+    "pages/user-address-confirm/user-address-confirm",
     "pages/user/user",
+    "pages/user-setting/user-setting",
+    "pages/user-service/user-service",
+    "pages/user-message/user-message",
+    "pages/user-wallet/user-wallet",
     "pages/user-address-create/user-address-create",
     "pages/user-address-editor/user-address-editor",
     "pages/user-order/user-order",
@@ -31,31 +40,25 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "images/tab_icon/index1.png",
-        "selectedIconPath": "images/tab_icon/index.png"
+        "selectedIconPath": "images/tab_icon/index2.png"
       },
       {
         "pagePath": "pages/sell/sell",
         "text": "卖书",
         "iconPath": "images/tab_icon/sell1.png",
-        "selectedIconPath": "images/tab_icon/sell.png"
-      },
-      {
-        "pagePath": "pages/book-list/book-list",
-        "text": "书单",
-        "iconPath": "images/tab_icon/book1.png",
-        "selectedIconPath": "images/tab_icon/book.png"
+        "selectedIconPath": "images/tab_icon/sell2.png"
       },
       {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "images/tab_icon/car1.png",
-        "selectedIconPath": "images/tab_icon/car.png"
+        "selectedIconPath": "images/tab_icon/cart2.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "images/tab_icon/mine1.png",
-        "selectedIconPath": "images/tab_icon/mine.png"
+        "selectedIconPath": "images/tab_icon/mine2.png"
       }
     ]
   },
@@ -86,6 +89,8 @@
     "van-notice-bar": "components/vant-weapp/notice-bar/index",
     "van-divider": "components/vant-weapp/divider/index",
     "van-card": "components/vant-weapp/card/index",
-    "van-steps": "components/vant-weapp/steps/index"
+    "van-steps": "components/vant-weapp/steps/index",
+    "van-tabbar": "components/vant-weapp/tabbar/index",
+    "van-tabbar-item": "components/vant-weapp/tabbar-item/index"
   }
 }

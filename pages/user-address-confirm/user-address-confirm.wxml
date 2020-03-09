@@ -1,0 +1,16 @@
+<view id="container">
+  <view bindtap="goback" data-id="5">
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="300px;" label="阿金 15289899897" border="{{ false }}" icon="location-o"  is-link />
+  </view>
+  <view >
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="300px;" label="king 17877833373" border="{{ false }}" icon="location-o"  is-link />
+  </view>
+  <view >
+      <van-cell title="广西南宁市兴宁区朝阳广场石凳2-1号" title-width="300px;" label="ajin 13298982342" border="{{ false }}" icon="location-o"  is-link />
+  </view>
+  <navigator url="/pages/user-address-create/user-address-create">
+    <view class="bottom_address">
+      <van-button type="primary" color="#ff8780" round block>添加地址</van-button>
+    </view>
+  </navigator>
+</view>

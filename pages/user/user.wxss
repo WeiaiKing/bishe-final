@@ -26,4 +26,19 @@ page{
 #body{
   margin: 30rpx 0;
 }
+/* 授权弹框 */
 
+.tankuang {
+    padding-top: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tankuang .txt {
+    color: #7b7b7b;
+    font-weight: 700;
+    font-size: 30rpx;
+    margin-bottom: 60rpx;
+}

@@ -4,61 +4,65 @@
   </view>
   <view id="address_cell">
     <van-cell-group>
-      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="615rpx;" label="姓名 111111" border="{{ false }}" icon="/images/address1.png" color="red" is-link url="/pages/user-address/user-address" title-class="cell_title" />
+      <van-cell title="广西钦州市钦南区北部湾大学西四115号" title-width="615rpx;" label="阿金 17878756322" border="{{ false }}" icon="/images/address1.png" color="red" is-link url="/pages/user-address-confirm/user-address-confirm" title-class="cell_title" />
     </van-cell-group>
     <view style="display:flex;">
       <block wx:for="{{10}}" wx:key="index">
         <view style="background:#607fcb;height:6rpx;width:30rpx;margin-right:15rpx;"></view>
         <view style="background:#f17d8b;width:30rpx;height:6rpx;margin-right:15rpx;"></view>
       </block>
-
     </view>
   </view>
+  <view id="pre-time">
+    <view>预约时间</view>
+    <input placeholder="快速上门时间" disabled bindtap="popup" value="{{week}} {{time}}" style="width:400rpx;font-size:30rpx;"></input>
+    <view>></view>
+  </view>
   <view id="commodity">
-    <van-card num="2" price="2.00" desc="手工生日礼物" title="蝴蝶风筝" thumb="https://picsum.photos/200" />
+    <van-card num="2" price="21.8.00" desc="作者：朱伟/唐迟" title="蝴蝶风筝" thumb="https://img3.doubanio.com/view/subject/s/public/s28280051.jpg" />
     <van-divider/>
   </view>
   <view id="bottom-content">
     <view class="bottom_flex">
-      <span>商品原价</span>
-      <span style="color:#ff4d94">￥230.4</span>
+      <span>书籍总价</span>
+      <span style="color:#ff8780">￥43.6</span>
     </view>
     <van-divider/>
     <view class="bottom_flex">
-      <span>商品优惠</span>
-      <span style="color:#ff4d94">-￥27</span>
+      <span>书籍优惠</span>
+      <span style="color:#ff8780">-￥3{{id}}</span>
     </view>
     <van-divider/>
     <view style="text-align:right;height:80rpx;margin-top:40rpx;">
-      <span>合计</span>
-      <span style="color:#ff4d94">￥163.4</span>
+      <span>小计</span>
+      <span style="color:#ff8780">￥40.6</span>
     </view>
   </view>
   <view id="popup ">
     <van-popup show="{{ popup }}" position="bottom" round custom-style="height: 65%;" bind:close="onClose">
-        <view style="text-align:center;margin-top:30rpx">选择上门时间</view>
-        <view style="height:2rpx;background:#e8e8e8;margin:15rpx 30rpx"></view>
+      <view style="text-align:center;margin-top:30rpx">选择上门时间</view>
+      <view style="height:2rpx;background:#e8e8e8;margin:15rpx 30rpx"></view>
       <view class="dialog">
         <view class="dialog_right">
-          <van-button color="#f1f1f1" size="small" round>周一(4月1日)</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">周二(4月2日)</van-button>
-          <van-button color="#f1f1f1" size="small" round>周三(4月3日)</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">周四(4月4日)</van-button>
-          <van-button color="#f1f1f1" size="small" round>周五(4月5日)</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">周六(4月6日)</van-button>
+          <van-button color="{{week=='周一(4月1日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周一(4月1日)">周一(4月1日)</van-button>
+          <van-button color="{{week=='周二(4月2日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周二(4月2日)">周二(4月2日)</van-button>
+          <van-button color="{{week=='周三(4月3日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周三(4月3日)">周三(4月3日)</van-button>
+          <van-button color="{{week=='周四(4月4日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周四(4月4日)">周四(4月4日)</van-button>
+          <van-button color="{{week=='周五(4月5日)'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selctWeek" data-week="周五(4月5日)">周五(4月5日)</van-button>
+          <van-button color="{{week=='周六(4月6日)'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selctWeek" data-week="周六(4月6日)">周六(4月6日)</van-button>
         </view>
         <view class="dialog_left">
-          <van-button color="#f1f1f1" size="small" round>10:00-11:00</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">11:00-12:00</van-button>
-          <van-button color="#f1f1f1" size="small" round>12:00-13:00</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">13:00-14:00</van-button>
-          <van-button color="#f1f1f1" size="small" round>14:00-15:00</van-button>
-          <van-button color="#f1f1f1" size="small" round style="margin:15rpx 0;">15:00-16:00</van-button>
-          <van-button color="#f1f1f1" size="small" round>16:00-17:00</van-button>
+          <van-button color="{{time=='10:00-11:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="10:00-11:00">10:00-11:00</van-button>
+          <van-button color="{{time=='11:00-12:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="11:00-12:00">11:00-12:00</van-button>
+          <van-button color="{{time=='12:00-13:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="12:00-13:00">12:00-13:00</van-button>
+          <van-button color="{{time=='13:00-14:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="13:00-14:00">13:00-14:00</van-button>
+          <van-button color="{{time=='14:00-15:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="14:00-15:00">14:00-15:00</van-button>
+          <van-button color="{{time=='15:00-16:00'?'#f19b73':'@f1f1f1'}}" size="small" round style="margin:15rpx 0;" bindtap="selectTime" data-time="15:00-16:00">15:00-16:00</van-button>
+          <van-button color="{{time=='16:00-17:00'?'#f19b73':'@f1f1f1'}}" size="small" round bindtap="selectTime" data-time="16:00-17:00">16:00-17:00</van-button>
         </view>
       </view>
       <view class="dialog-confirm">
-        <van-button type="warning" round bindtap="buy_confirm">确定</van-button>
+        <van-button type="warning" round bindtap="time_confirm">确定</van-button>
       </view>
     </van-popup>
 
@@ -68,8 +72,8 @@
   <view class="bottom">
     <view>
       <span>需支付</span>
-      <span style="color:#ff4d94;">￥163.4</span>
+      <span style="color:#ff8780;">￥40.6</span>
     </view>
-    <van-button type="info" round color="#ff4d94" bindtap="{{baoming}}">去支付</van-button>
+    <van-button type="info" round color="#ff8780" bindtap="{{baoming}}">微信支付</van-button>
   </view>
 </view>

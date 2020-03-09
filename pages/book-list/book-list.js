@@ -67,7 +67,33 @@ Page({
         name: "马克思主义学院",
         id: 15
       },
-    ]
+    ],
+    
+  },
+  onChange(e) {
+    console.log(e.detail)
+    if (e.detail==0){
+      wx.switchTab({
+        url: '../index/index',
+        success: function (res) { },
+      })
+    }else if(e.detail==1){
+      wx.switchTab({
+        url: '../sell/sell',
+        success: function (res) { },
+      })
+    } else if (e.detail == 2) {
+      wx.switchTab({
+        url: '../cart/cart',
+        success: function (res) { },
+      })
+    }else{
+      wx.switchTab({
+        url: '../user/user',
+        success: function (res) { },
+      })
+    }
+   
   },
   go_book_detail(){
     console.log("kk")

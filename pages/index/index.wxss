@@ -2,28 +2,53 @@ page {
   font-size: 28rpx;
 }
 
-#search {
-  margin: 15rpx 30rpx;
-  box-sizing: border-box;
-  padding: 15rpx;
+#search{
+    /* width: 100%; */
+    padding: 20rpx 30rpx;
+    display: flex;
+    align-items: center;
+    box-shadow:0px 12rpx 30rpx 0px rgba(0,0,0,0.03);
+}
+
+.back{
+    /* background-color: #fdfdfd; */
+    background-color: rgba(200,200,200,0.08);
+}
+
+.search_content{
+    width: 100%;
+    height: 64rpx;
+    border: 1px solid #dad6d6;
+    border-radius: 15rpx;
+    padding: 8rpx;
+    display: flex;
+    align-items: center
+}
+
+.search_img{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 16rpx;
+}
+
+.search_inp{
+    height: 40rpx;
+    font-size: 28rpx;
+    width: 100%;
+}
+
+.inp_text{
+    font-size: 28rpx;
+    color: #A8ACB2
+}
+.search_classfication{
+  font-size: 24rpx;
+  margin-left: 30rpx;
   display: flex;
-  height: 60rpx;
-  border-radius: 10rpx;
-  justify-content: space-between;
-  align-items: center;
-  background: #e0e0e0;
-}
-
-.search_header {
-  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-
-.search_p {
-  width: 500rpx;
-  padding-left: 15rpx;
-}
-
 /* 轮播图 */
 
 .page-body {

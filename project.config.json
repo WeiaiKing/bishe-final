@@ -130,6 +130,69 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index-search/index-search",
+					"pathName": "pages/index-search/index-search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index-detail/index-detail",
+					"pathName": "pages/index-detail/index-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-wallet/user-wallet",
+					"pathName": "pages/user-wallet/user-wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-message/user-message",
+					"pathName": "pages/user-message/user-message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-service/user-service",
+					"pathName": "pages/user-service/user-service",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-setting/user-setting",
+					"pathName": "pages/user-setting/user-setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user-address-confirm/user-address-confirm",
+					"pathName": "pages/user-address-confirm/user-address-confirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/sell-phace/sell-phace",
+					"pathName": "pages/sell-phace/sell-phace",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart-rule/cart-rule",
+					"pathName": "pages/cart-rule/cart-rule",
 					"scene": null
 				}
 			]

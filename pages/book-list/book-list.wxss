@@ -33,4 +33,13 @@ page{
   font-weight: 700;
 }
 
+.van-tabbar-item__icon{
+  font-size: var(--tabbar-item-icon-size,27px)!important;
+  margin-bottom: var(--tabbar-item-margin-bottom,0px)!important;
+
+}
+.van-tabbar{
+  /* height: var(--tabbar-height,60rpx)!important; */
+
+}
 

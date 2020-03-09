@@ -16,7 +16,7 @@ page{
   align-items: center;
 }
 .carSelect_right{
-  height: 150rpx;
+  height: 180rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
